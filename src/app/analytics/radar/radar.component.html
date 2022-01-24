@@ -1,0 +1,272 @@
+<div fxLayout="row">
+  <div class="col-xs-6"></div>
+  <div class="col-xs-6">
+    <div class="flex-p">
+
+      <button mat-raised-button color="primary" class="pull-right filters-hover" (click)="filterToggle = !filterToggle">
+
+        <mat-icon>filter_list</mat-icon> Filter
+
+      </button>
+
+    </div>
+  </div>
+</div>
+
+<!-- Filter show/hide -->
+<div fxLayout="row wrap" *ngIf="filterToggle" class="sizeAlign">
+  <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins">
+    <mat-card class="filter">
+      <mat-card-content>
+        <div class="row">
+
+          <div class="col-sm-4">
+            <div class="col-sm-4 newMarginClass" style="margin-top: 5px;">Project Type:</div>
+            <div class="col-sm-8">
+              <input type="text" placeholder="Search by Project Type" class="form-control">
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class="col-sm-4 newMarginClass" style="margin-top: 5px;">State:</div>
+            <div class="col-sm-8">
+              <input type="text" placeholder="Search by State" class="form-control">
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+
+            <div class="col-lg-1" style="margin-left: 150px">
+              <button mat-raised-button class="pull-right btn-primary">
+                <mat-icon>youtube_searched_for</mat-icon> Search
+              </button>
+            </div>
+
+            <div class="col-lg-1" style="margin-top: 5px;">
+              <button mat-raised-button style="background-color:#37474f; color:#fff !important;margin-top: -5px">
+                <mat-icon>settings_backup_restore</mat-icon> Clear
+              </button>
+            </div>
+
+            <a (click)="filterToggle = !filterToggle" class="pull-right"
+              style="font-size: 25px; cursor: pointer; margin-left: 5px">
+              <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+            </a>
+
+          </div>
+
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div class="row col-12 m-0 mt-3 p-0">
+  <!-- 1 -->
+  <div class="row col-12 m-0 p-0">
+    <div class="col-6" style="vertical-align: middle;">
+      <div>
+        <div class="chart-header m-0" style="vertical-align: middle;">
+          <p class="m-1 pb-1" style="font-size: 17px; vertical-align: middle;">Material Consumption by Project (in
+            Rupees)</p>
+        </div>
+        <div style="display: block">
+          <div style="height: 300px;" [chart]="tentureOfEmployees"></div>
+        </div>
+        <div align="center">
+          <p>
+            <!-- <span
+              ><i class="fa fa-stop" style="color: rgb(33, 101, 190)"></i
+              >Project Completion</span> -->
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div>
+        <div class="chart-header">
+          <p class="m-1 pb-1" style="font-size: 17px">Activity Cost per Project (in Rupees)</p>
+        </div>
+        <div style="display: block">
+          <div style="height: 300px" [chart]="monthyPulseOfEmployees"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 2 -->
+  <div class="row col-12 m-0 p-0 mt-5">
+    <div class="col-6">
+      <div>
+        <div class="chart-header">
+          <p class="m-1 pb-1" style="font-size: 17px">Inventory by Project</p>
+        </div>
+        <div class="flex-p">
+          <mat-card>
+            <div class="w-100 h-300p">
+              <ngx-charts-pie-chart [scheme]="colorScheme" [results]="single" [legend]="showLegend"
+                [explodeSlices]="explodeSlices" [labels]="showLabels" [doughnut]="doughnut" [gradient]="gradient">
+              </ngx-charts-pie-chart>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div>
+        <div class="chart-header">
+          <p class="m-1 pb-1" style="font-size: 17px">Purchase Orders in last 6 months</p>
+        </div>
+        <div style="display: block">
+          <div style="height: 335px" [chart]="disciplineChartMonthly"></div>
+        </div>
+        <div align="center">
+          <p>
+            <!-- <span
+              ><i class="fa fa-stop" style="color: rgb(33, 101, 192)"></i
+              >Purchase Orders</span
+            > -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="row col-12 mt-5 m-0 p-0">
+    <!-- <div class="col-6">
+      <div style="margin-left: 2%">
+        <div class="chart-header">
+          <p style="font-size: 17px">Hiring trend in last 6 months</p>
+        </div>
+        <div style="display: block">
+          <div style="height: 335px" [chart]="hiringMonthly"></div>
+        </div>
+        <div align="center">
+          <p>
+            <span
+              ><i class="fa fa-stop" style="color: rgb(33, 101, 192)"></i
+              >Hirings</span
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div style="margin-left: 2%">
+        <div class="chart-header">
+          <p style="font-size: 17px">Receivables and Payables</p>
+        </div>
+        <div style="display: block">
+          <div style="height: 300px" [chart]="receiveandpay"></div>
+        </div>
+      </div>
+    </div> -->
+    <div class="col-12">
+      <div>
+        <div class="chart-header">
+          <p class="m-1 pb-1" style="font-size: 17px">Monthly Expense Chart (in Rupees)</p>
+        </div>
+        <div style="display: block">
+          <div style="height: 335px" [chart]="hiringMonthly"></div>
+        </div>
+        <div align="center">
+          <p>
+            <!-- <span
+              ><i class="fa fa-stop" style="color: rgb(33, 101, 192)"></i
+              >Expense</span
+            > -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="row col-12 mt-5 m-0 p-0">
+    <div class="col-6">
+      <div style="margin-left: 2%">
+        <div class="chart-header">
+          <p class="m-1 pb-1" style="font-size: 17px">Ageing Analysis: Payables</p>
+        </div>
+        <div style="display: block">
+          <div style="height: 300px" [chart]="aeginganalysis"></div>
+        </div>
+        <div align="center">
+          <p>
+            <!-- <span
+              ><i class="fa fa-stop" style="color: rgb(33, 101, 190)"></i>Payables</span
+            > -->
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-6">
+      <div style="margin-left: 2%">
+        <div class="chart-header">
+          <p style="font-size: 17px">Delay Distribution by Reason</p>
+        </div>
+        <div style="display: block">
+          <div style="height: 300px" [chart]="delaydistribution"></div>
+        </div>
+        <div align="center">
+          <p>
+            <span
+              ><i class="fa fa-stop" style="color: rgb(33, 101, 190)"></i>Delay
+              Distribution</span
+            >
+          </p>
+        </div>
+      </div>
+    </div> -->
+    <div class="col-6">
+      <div style="margin-left: 2%">
+        <div class="chart-header">
+          <p class="m-1 pb-1" style="font-size: 17px">Budget vs Expenses by Project (in Rupees)</p>
+        </div>
+        <div style="display: block">
+          <div style="height: 300px" [chart]="receiveandpay"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 5 -->
+  <div class="row col-12 mt-5 m-0 p-0">
+    <div class="col-6">
+      <div>
+        <div class="chart-header">
+          <p class="m-1 pb-1" style="font-size: 17px">GRN Delay Distribution by Project </p>
+        </div>
+        <div class="flex-p">
+          <mat-card>
+            <div class="w-100 h-300p">
+              <ngx-charts-pie-chart [scheme]="colorScheme" [results]="two" [legend]="showLegend"
+                [explodeSlices]="explodeSlices" [labels]="showLabels" [doughnut]="doughnut" [gradient]="gradient">
+              </ngx-charts-pie-chart>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div>
+        <div class="chart-header">
+          <p class="m-1 pb-1" style="font-size: 17px">Vendor Distribution by Rating</p>
+        </div>
+        <div class="flex-p">
+          <mat-card>
+            <div class="w-100 h-300p">
+              <ngx-charts-pie-chart [scheme]="colorScheme1" [results]="three" [legend]="showLegend"
+                [explodeSlices]="explodeSlices" [labels]="showLabels" [doughnut]="doughnut" [gradient]="gradient">
+              </ngx-charts-pie-chart>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

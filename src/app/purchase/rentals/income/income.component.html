@@ -1,0 +1,154 @@
+<div class="container-fluid pl-2 mb-5">
+<div class="row mx-3 mt-4">
+<div class="col-sm-4">
+  <div class="row">
+    <div class="col-sm-11 my-3 py-5 card" style="font-weight: bold ;border-radius: 10px;color: rgb(93, 165, 59);box-shadow: 5px 5px 5px grey;">
+      <div class="row">
+        <div class="col-sm-8">
+          <label style="font-size: 20px;">Collected Income</label>
+        </div>
+        <div class="col-sm-4">
+          <label style="font-size: 20px;" class="pull-right">RS. 0/-</label>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-11 my-3 py-5 card" style="font-weight: bold; border-radius: 10px;color: rgb(190, 188, 46);box-shadow: 5px 5px 5px grey;">
+      <div class="row">
+        <div class="col-sm-8">
+          <label style="font-size: 20px;">Pending Income</label> 
+        </div>
+        <div class="col-sm-4">
+          <label style="font-size: 20px;" class="pull-right">RS. 23,000/-</label>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-11 mt-2  py-5 card" style="font-weight: bold; border-radius: 10px;color: rgb(175, 100, 100);box-shadow: 5px 5px 5px grey;">
+      <div class="row">
+        <div class="col-sm-8">
+          <label style="font-size: 20px;">Uncollected Income</label> 
+        </div>
+        <div class="col-sm-4">
+          <label style="font-size: 20px;" class="pull-right">RS. 13,892/-</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="chart" class="col-sm-8">
+  <div fxFlex="100" class="flex-p">
+    <mat-card>
+        <mat-card-header fxLayoutAlign="center center">                
+        </mat-card-header>
+        <div class="w-100 h-300p">
+          <ngx-charts-bar-vertical-stacked
+          [scheme]="colorScheme"
+          [results]="multi"
+          [gradient]="gradient"
+          [xAxis]="showXAxis"
+          [yAxis]="showYAxis"
+          [showXAxisLabel]="showXAxisLabel"
+          [showYAxisLabel]="showYAxisLabel"
+          [xAxisLabel]="xAxisLabel"
+          [yAxisLabel]="yAxisLabel"
+          >
+      </ngx-charts-bar-vertical-stacked>                
+        </div>
+    </mat-card>
+</div>
+</div>
+</div>
+
+
+  <div class="row ml-1 mr-2 py-2 mt-4" style="border: 1px solid 
+  lightgray; background-color: #d66e6e;">
+    <label style="font-size:20px;font-weight: bold;" class="ml-4 ">Pending Incomes</label>
+  </div>
+
+  <div class="row ml-1 mr-2 pt-3 pb-2" style="background-color: rgb(235, 235, 235);">
+    <div class="col-sm-12">
+      <div *ngIf="tableNumber1 == 0 || tableNumber == 2 || tableNumber == 3 || tableNumber == 4" class="pull-right align-items-center justify-content-center" style="color: cornflowerblue; cursor: pointer;" (click)="openTable1(1)">
+        <mat-icon class="pull-right align-items-center justify-content-center" style="font-size: medium;">keyboard_arrow_down</mat-icon>
+        <h5 class="pull-right align-items-center justify-content-center">Details</h5>
+      </div>
+
+      <div *ngIf="tableNumber1 == 1" class="pull-right align-items-center justify-content-center" style="color: cornflowerblue; cursor: pointer;" (click)="openTable1(0)">
+        <mat-icon class="pull-right align-items-center justify-content-center" style="font-size: medium;">keyboard_arrow_up</mat-icon>
+        <h5 class="pull-right align-items-center justify-content-center">Details</h5>
+      </div>
+    </div>
+
+    <div *ngIf="tableNumber1 == 1" class="col-xs-12 px-4 py-2" style="overflow-x: auto">
+      <div id="grid-table-container" class="table-responsive" >
+        <table matSort id="example2" class="table table-bordered table-hover" style="margin-left: 0px!important;">
+          <thead class="tbl-head">
+            <tr _ngcontent-c21="" class="custom-thead-budget">
+              <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">Asset Type</th>
+              <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">Renter</th>
+              <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">Rental Period</th>
+              <th _ngcontent-c21="" style="min-width: 100px;" class="text-center" >Payment Type</th>
+              <th _ngcontent-c21="" style="min-width: 80px;">Term Date</th>
+              <th _ngcontent-c21="" class="text-center" style="min-width: 100px;" >Payment Amount</th>
+              <th _ngcontent-c21="" class="text-center" style="min-width: 80px;">Due Date</th>
+              <th _ngcontent-c21="" class="text-center" style="min-width: 80px;">Actions</th>
+              <!-- <th _ngcontent-c21="" style="min-width: 80px;">Actions</th> -->
+              <!-- <th _ngcontent-c21="" style="min-width: 80px;">Approval</th> -->
+            </tr>
+          </thead>
+
+          <tbody class="bg-white">
+
+            <tr *ngFor="let item of items;let i = index">
+              <td class="text-center">{{item.assetType}}</td>
+               <td class="text-center">{{item.renter}}</td>
+              <td class="text-center">{{item.rentalPeriod}}</td>
+
+              <td class="text-center">{{item.paymentType}}</td>
+              <td class="text-center">{{item.termDate}}</td>
+              <td class="text-center">{{item.paymentAmount}}</td>
+              <td class="text-center">{{item.dueDate}}</td>
+              <td class="text-center">
+                <a style="cursor: pointer;margin-right:10px; "
+                    matTooltip="Update Details">
+                    <i class="fa fa-edit" style="color: cornflowerblue"></i>
+                </a>
+                <a><i class="fa fa-trash red" matTooltip="Delete"
+                        style="cursor: pointer;"></i></a>
+            </td>
+                <!-- <td class="text-center" (click)="approvaldialog()" style="color: blue;cursor: pointer;" matTooltip="View Approval"></td> -->
+            </tr>
+
+
+
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row ml-1 mr-2 py-2 mt-4" style="border: 1px solid 
+  lightgray; background-color:#8deeb7;">
+    <label style="font-size:20px;font-weight: bold;" class="ml-4 ">Collected Incomes</label>
+  </div>
+
+  <div class="row ml-1 mr-2 pt-3 pb-2" style="background-color: rgb(235, 235, 235);">
+    <div class="col-sm-12">
+      <div *ngIf="tableNumber2 == 0 || tableNumber == 2 || tableNumber == 3 || tableNumber == 4" class="pull-right align-items-center justify-content-center" style="color: cornflowerblue; cursor: pointer;" (click)="openTable2(1)">
+        <mat-icon class="pull-right align-items-center justify-content-center" style="font-size: medium;">keyboard_arrow_down</mat-icon>
+        <h5 class="pull-right align-items-center justify-content-center">Details</h5>
+      </div>
+
+      <div *ngIf="tableNumber2 == 1" class="pull-right align-items-center justify-content-center" style="color: cornflowerblue; cursor: pointer;" (click)="openTable2(0)">
+        <mat-icon class="pull-right align-items-center justify-content-center" style="font-size: medium;">keyboard_arrow_up</mat-icon>
+        <h5 class="pull-right align-items-center justify-content-center">Details</h5>
+      </div>
+    </div>
+
+    <div *ngIf="tableNumber2 == 1" class="col-xs-12 px-4 py-2" style="overflow-x: auto">
+      <label style="font-size: 15px;">No payment has been completed yet. Go to the equipment you recentely rented and add income</label>
+    </div>
+  </div>
+
+</div>
+

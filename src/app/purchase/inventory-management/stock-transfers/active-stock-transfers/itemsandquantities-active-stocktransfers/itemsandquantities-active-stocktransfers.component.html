@@ -1,0 +1,86 @@
+<div class="w-100">
+  <div class="row">
+      <div class="col-xs-12" style="margin-bottom: 15px;">
+          <div class="pills">
+              <ul class="nav nav-pills" style="margin-left: 10px;margin-bottom: -18px;">
+                  <li routerLinkActive="active" routerLink="/purchase/inventory-management/grn">
+                      <a mat-raised-button class="navtabWidth" style="margin-top: 10px;">
+                          GRN
+                      </a>
+                  </li>
+                  <!-- <li routerLinkActive="active" routerLink="/purchase/inventory-management/gate-passes">
+                    <a mat-raised-button class="navtabWidth" style="margin-top: 10px;">
+                      Gate Passes
+                    </a>
+                  </li> -->
+                  <li routerLinkActive="active" routerLink="/purchase/inventory-management/stock-transfers">
+                      <a mat-raised-button class="navtabWidth" style="margin-top: 10px;">
+                       Stock Transfers
+                      </a>
+                  </li>
+                  
+                  <li routerLinkActive="active" routerLink="/purchase/inventory-management/material-issues">
+                      <a mat-raised-button class="navtabWidth" style="margin-top: 10px;">
+                        Material Issues
+                      </a>
+                  </li>  
+                  <!-- <li routerLinkActive="active" routerLink="/purchase/inventory-management/inventory-analysis">
+                      <a mat-raised-button class="navtabWidth" style="margin-top: 10px;">
+                        inventory analysis
+                      </a>
+                  </li>                                  -->
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="container-fluid" >
+  <div fxLayout="row wrap" #resizedDiv>
+    <div class="flex-p w-100 sizeAlign">
+      <div class="col-xs-12 mt-3 mb-3 "  >
+        <button mat-raised-button class="pull-right  btn-default"
+        routerLink="/purchase/inventory-management/stock-transfers/ActiveStockTransfers">
+           <mat-icon>chevron_left</mat-icon> Back
+        </button>
+      </div>
+       <div class="row">
+        <div class="col-xs-12">
+          <div id="grid-table-container" class="table-responsive">
+            <table matSort id="example2" class="table table-bordered table-hover">
+              <thead class="tbl-head">
+                <tr>
+                  <th class="text-center">Item Code</th>
+                  <th class="text-center">Item Name</th>
+                  <th class="text-center">Item Category</th>
+                  <th class="text-center">Sent Qty</th>
+                  <th class="text-center">Received Qty</th>
+                  <th class="text-center">Discrepencies</th>
+                  <!-- <th class="text-center" style="width: 112px!important;">Actions</th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of items">
+                  <td class="text-center">{{item.itemcode}}</td>
+                  <td class="text-center">{{item.itemname}}</td>
+                  <td class="text-center">{{item.itemcategory}}</td>
+                  <td class="text-center">{{item.sentqty}}</td>
+                  <td class="text-center">{{item.receivedqty}}</td>
+                  <td class="text-center">{{item.discripancies}}</td>
+                  
+                  <!-- <td class="text-center editDel">
+                    <a style="cursor: pointer;margin-right:10px; " matTooltip="Update Item"
+                    (click)="createstocktransferrequest(item)">
+                      <i class="fa fa-edit" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash red" matTooltip="Delete Item" style="cursor: pointer;"></i></a>
+                  </td> -->
+                </tr>
+              </tbody>
+            </table>
+            <mat-paginator [pageSizeOptions]="[5, 10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

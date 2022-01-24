@@ -1,0 +1,107 @@
+<div class="NewHeader" style="background-color:#286ba5 !important; height: 50px;">
+  <h1 mat-dialog-title>
+    {{ data ? 'Update' : 'Add'}} Stock Transfer Request
+  </h1>
+</div>
+<form>
+  <div mat-dialog-content>
+    <div class="col-sm-12">
+      <div class="col-sm-6"> 
+        <!-- <div class="form-group">
+          <label class="control-label col-lg-12 col-md-12 col-sm-12 col-xs-12 add-member-label" style="margin-left: -15px !important;" >Select STN Ref:</label>
+          <mat-select placeholder="Select STN Ref." class="form-control" required >
+            <mat-option value="1">STO/OTP-OM/OCT-19/10001</mat-option>
+            <mat-option value="2">Service Challans</mat-option>
+            <mat-option value="3">Miscellaneous</mat-option>
+            </mat-select>
+        </div> -->
+        
+        <div class="form-group"  >
+          <label class="control-label col-lg-12 col-md-12 col-sm-12 col-xs-12 add-member-label" style="margin-left: -15px !important;">STN Ref:</label>
+          <input type="text" value="STO/OTP-OM/OCT-19/10001" class="form-control" placeholder="Enter STN Ref:" required >
+        </div>
+
+        <div class="form-group"  >
+          <label class="control-label col-lg-12 col-md-12 col-sm-12 col-xs-12 add-member-label" style="margin-left: -15px !important;">Date: </label>
+          <input type="date" class="form-control" placeholder="Select Date" required >
+        </div>
+       
+        
+        
+        <div class="form-group"  >
+          <label class="control-label col-lg-12 col-md-12 col-sm-12 col-xs-12 add-member-label" style="margin-left: -15px !important;">	Request Title: </label>
+          <input type="text" class="form-control" placeholder="Enter Request Title" required >
+        </div>
+       
+        <div class="form-group">
+          <label class="control-label col-lg-12 col-md-12 col-sm-12 col-xs-12 add-member-label" style="margin-left: -15px !important;" >Source Project:</label>
+          <mat-select placeholder="Select Source Project" class="form-control" required >
+            <mat-option value="1">Usha International Ltd</mat-option>
+            <mat-option value="2">Mallikarjuna Rao Ltd</mat-option>
+            <mat-option value="3">BHEL Ltd</mat-option>
+            <mat-option value="1">KTPP</mat-option>
+            <mat-option value="2">Mallikarjuna Rao Ltd</mat-option>
+            <mat-option value="3">Nagarjuna Ltd</mat-option>
+            <mat-option value="3">Singrauli</mat-option>
+            </mat-select>
+        </div>
+
+       
+        
+        
+        
+      </div>
+      <div class="col-sm-6"> 
+        <div class="form-group">
+          <label class="control-label col-lg-12 col-md-12 col-sm-12 col-xs-12 add-member-label" style="margin-left: -15px !important;" >Source Location:</label>
+          <mat-select placeholder="Select Source Location" class="form-control" required >
+            <mat-option value="1">Karnataka</mat-option>
+            <mat-option value="2">Bangalore</mat-option>
+            <mat-option value="3">Chennai</mat-option>
+            <mat-option value="1">Thane</mat-option>
+            <mat-option value="2">Delhi</mat-option>
+            <mat-option value="3">Kanpur</mat-option>
+            </mat-select>
+        </div>
+        
+        <div class="form-group">
+          <label class="control-label col-lg-12 col-md-12 col-sm-12 col-xs-12 add-member-label" style="margin-left: -15px !important;" >Receiving Project:</label>
+          <mat-select placeholder="Select Receiving Project" class="form-control" required >
+            <mat-option value="1">Tata Motors Ltd.</mat-option>
+            <mat-option value="2">Rajesh Exports Ltd.</mat-option>
+            <mat-option value="3">Indian Oil Corporation Ltd.</mat-option>
+            <mat-option value="1">NTPC Ltd.</mat-option>
+            <mat-option value="2">Vedanta Ltd.</mat-option>
+            <mat-option value="3">Grasim Industries Ltd.</mat-option>
+            </mat-select>
+        </div>
+
+        <div class="form-group">
+          <label class="control-label col-lg-12 col-md-12 col-sm-12 col-xs-12 add-member-label" style="margin-left: -15px !important;" >Destination:</label>
+          <mat-select placeholder="Select Destination" class="form-control" required >
+            <mat-option value="1">Hyderabad</mat-option>
+            <mat-option value="2">Kolkata</mat-option>
+            <mat-option value="3">Pune</mat-option>
+            <mat-option value="1">Haridwar</mat-option>
+            <mat-option value="2">Mumbai</mat-option>
+            <mat-option value="3">Srinagar</mat-option>
+            </mat-select>
+        </div>
+
+        <div class="form-group"  >
+          <label class="control-label col-lg-12 col-md-12 col-sm-12 col-xs-12 add-member-label" style="margin-left: -15px !important;">Notes: </label>
+          <input type="text" class="form-control" placeholder="Enter Remarks" required >
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <mat-dialog-actions align="end">
+        <button mat-raised-button class="add-hover btn-primary" type="submit" (click)="close()"><mat-icon>send</mat-icon>&nbsp;Save</button>
+        <button mat-raised-button type="button" class="add-dark-hover btn-default" (click)="close()"><mat-icon>cancel</mat-icon>&nbsp;Cancel</button>
+    </mat-dialog-actions>
+</form>
+
+
+
+

@@ -1,0 +1,42 @@
+<div class="container-fluid">
+<div class="col-sm-12 m-3">
+  <div class="col-sm-5"></div>
+  <div class="form-group col-sm-6" style="margin-top: 10px;">
+    <div class="pull-right">  
+      <input class="search__input" style=" width:150%" type="text" placeholder="Search by keyword">  </div>
+      <button mat-raised-button class="pull-right  btn-primary mr-5" >
+        <mat-icon>cloud_upload</mat-icon> Upload Document
+      </button>
+  </div>
+</div>
+
+<div class="mx-3">
+  <table matSort id="example2" class="table table-bordered table-hover">
+    <thead class="tbl-head">
+        <tr>
+            <th class="text-left">Equipment Type</th>
+            <th class="text-left">Category</th>
+            <th class="text-left">Document Type</th>
+            <th class="text-left">Description</th>
+            <th class="text-left">Added Date</th>
+            <th style="text-align: center!important;">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of items">
+            <td>{{item.type}}</td>
+            <td style="text-align: left!important;">{{item.category}}</td>
+            <td style="text-align: left!important;">{{item.docType}}</td>
+            <td style="text-align: center!important;">{{item.description}}</td>
+            <td style="text-align: left!important;">{{item.addedDate}}</td>
+            <td style="text-align: center!important;">
+              <mat-icon style="cursor: pointer;" matTooltip="Document" routerLink="/purchase/document"> insert_drive_file</mat-icon>
+            </td>
+          </tr>
+        <!-- <tr *ngIf="totalProjects == null || totalProjects.length == 0">
+            <td colspan="13">No data available</td>
+        </tr> -->
+    </tbody>
+</table>
+</div>
+</div>

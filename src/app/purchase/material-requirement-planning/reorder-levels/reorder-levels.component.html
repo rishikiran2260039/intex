@@ -1,0 +1,54 @@
+<div class="container-fluid">
+<div class="row" style="margin-top:23px;">
+  <div class="col-xs-12" style="overflow-x: auto">
+    <div id="grid-table-container" class="table-responsive" >
+      <table matSort id="example2" class="table table-bordered table-hover">
+        <thead class="tbl-head">
+          <tr>
+            <th class="text-center" style="width: 112px !important;">Actions</th>
+            <th class="text-center">Part#</th>
+            <th class="text-center">Part Name</th>
+            <th class="text-center">Last Received</th>
+            <th class="text-center">Last Issued</th>
+            <th class="text-center">Available Stock</th>
+            <th class="text-center">Lead Time</th>
+            <th class="text-center">Safety Stock</th>
+            <th class="text-center">Average Monthly Consumption</th>
+            <!-- <th class="text-center">Buffer Stock</th> -->
+            <th class="text-center">Reorder Qty</th>
+            <th class="text-center">MOQ</th>
+            <th class="text-center">Reorder Interval</th>
+            <th class="text-center">Reorder Stock Due Date</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of items">
+            <td class="text-center" style="font-size: 18px;">
+              <a style="cursor: pointer;margin-right:10px; " matTooltip="Update Item">
+                <i class="fa fa-edit" style="color: cornflowerblue"></i>
+              </a>
+              <a><i class="fa fa-trash red" matTooltip="Delete Item" style="cursor: pointer;"></i></a>
+            </td>
+            <td class="text-center">{{item.part}}</td>
+            <td class="text-center">{{item.partName}}</td>
+            <td class="text-center">{{item.stockingDate}}</td>
+            <td class="text-center">{{item.updatedDate}}</td>
+            <td class="text-center">{{item.available}}</td>
+            <td class="text-center">{{item.leadTime}}</td>
+            <td class="text-center" style="color: blue; cursor: pointer;" (click)="safetyStockDialog(item)">{{item.safetyStock}}</td>
+            <td class="text-center">{{item.dailyUsage}}</td>
+            <!-- <td class="text-center">{{item.buffer}}</td> -->
+            <td class="text-center">{{item.reorder}}</td>
+            <td class="text-center">{{item.moq}}</td>
+            <td class="text-center">{{item.reorderinterval}}</td>
+            <td class="text-center">{{item.reorderDate}}</td>
+            
+          </tr>
+        </tbody>
+      </table>
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
+    </div>
+  </div>
+</div>
+</div>
