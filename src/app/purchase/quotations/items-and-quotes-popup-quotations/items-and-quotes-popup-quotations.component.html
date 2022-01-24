@@ -29,7 +29,9 @@
                 <th class="text-center" >Item Code</th>
                 <th class="text-center">Quantity</th>
                 <th class="text-center">Quotes</th>
-                <th class="text-center">Approved Rate</th>
+                <th class="text-center">Last Purchased Price</th>
+                <th class="text-center">Last Purchased Date</th>
+                <th class="text-center">Po Reference</th>
                 <th class="text-center">L1 (Lowest Price)</th>
                 <th class="text-left">Approved Vendor</th>
                 <th class="text-center">Status</th>
@@ -46,9 +48,15 @@
                 <td class="text-center"  style="color: blue; cursor: pointer;" routerLink="/purchase/procurement/quotaions/ItemsAndQuotes" (click)="close()">{{item.Quotes}}</td>
                 <td style="text-align: center!important;">
                   {{item.value}}
-                </td>     
+                </td>
                 <td style="text-align: center!important;">
-                  <input type="checkbox" name="" id="" >
+                  {{item.date}}
+                </td>  
+                <td style="text-align: center!important;">
+                  {{item.ref}}
+                </td>  
+                <td style="text-align: center!important;">
+                  {{item.lvalue}}
                 </td>     
                 <td style="text-align: left!important;">{{item.approvedvendor}}</td>     
                 <td>{{item.status}}</td>

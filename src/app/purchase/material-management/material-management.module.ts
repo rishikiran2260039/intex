@@ -13,6 +13,8 @@ import { RfqComponent } from './rfq/rfq.component';
 import { AddrfqPopupComponent } from './rfq/addrfq-popup/addrfq-popup.component';
 import { AddRequisitionDialogComponent } from '../requisition/add-requisition-dialog/add-requisition-dialog.component';
 import { AddConsignmentActiveComponent } from './consignment/active/add-consignment-active/add-consignment-active.component';
+import { RfqformComponent } from './rfqform/rfqform.component';
+import { GridColomRqComponent } from './grid-colom-rq/grid-colom-rq.component';
 
 
 export const routes = [
@@ -23,15 +25,16 @@ export const routes = [
   { path: 'consignments', component:ConsignmentComponent,loadChildren:'./consignment/consignment.module#ConsignmentModule', data: { breadcrumb: 'Consignments'}},
   { path :'rfq' , component: RfqComponent, data: { breadcrumb: 'RFQ' }},
   { path: 'consignments/AddConsignment', component: AddConsignmentActiveComponent ,loadChildren:"./consignment/active/add-consignment-active/add-consignment-active.module#AddConsignmentActiveModule",data: { breadcrumb: 'Add Consignments'}},
+  { path :'rfq/rfq-form' , component: RfqformComponent, data: { breadcrumb: 'RFQ Form' }},
   
 ];
 
 @NgModule({
-  declarations: [RequisitionComponent, QuotationsComponent, PurchaseOrdersComponent, AddConsignmentActiveComponent, ConsignmentComponent, AddRequisitionDialogComponent, RfqComponent, AddrfqPopupComponent, ],
+  declarations: [RequisitionComponent, QuotationsComponent, PurchaseOrdersComponent, AddConsignmentActiveComponent, ConsignmentComponent, AddRequisitionDialogComponent, RfqComponent, AddrfqPopupComponent, RfqformComponent, GridColomRqComponent, ],
   imports: [
     CommonModule,RouterModule.forChild(routes), DragulaModule,
     SharedModule,ConfirmationPopoverModule,ReactiveFormsModule,FormsModule
   ],
-  entryComponents:[AddRequisitionDialogComponent,AddrfqPopupComponent,]
+  entryComponents:[AddRequisitionDialogComponent,AddrfqPopupComponent,GridColomRqComponent]
 })
 export class MaterialManagementModule { }

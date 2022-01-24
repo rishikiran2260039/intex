@@ -309,7 +309,7 @@
                       {{item.handover}}
 
                     </td >
-                    <td style="color: blue;cursor: pointer;" [routerLink]="['/projects/project-reports']">
+                    <td style="color: blue;cursor: pointer;" [routerLink]="['/projects/project-reports/daily']">
                       {{item.reports}}
 
                     </td>
@@ -409,11 +409,12 @@
 
                 </tbody>
               </table>
-              <mat-paginator [length]="totalSize" [pageIndex]="currentPage" [pageSize]="pageSize"
-                [pageSizeOptions]="[5, 10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
+      
             </div>
           </div>
         </div>
+        <mat-paginator [length]="totalSize" [pageIndex]="currentPage" [pageSize]="pageSize"
+        [pageSizeOptions]="[5, 10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
       </div>
     </div>
 

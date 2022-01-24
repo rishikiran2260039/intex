@@ -58,6 +58,7 @@
               <tr>
                
                 <th class="text-left">Item Name</th>
+                <th class="text-left">Indent Reference</th>
                 <th class="text-left">Item Code</th>
                 <th class="text-left">Item Catagory</th>
                 <th class="text-left"> Make </th>
@@ -86,6 +87,7 @@
               <tr *ngFor="let item of items">
                
                 <td class="text-left">{{item.ItemName }}</td>
+                <td class="text-left">{{item.reference }}</td>
                 <td class="text-left">{{item.ItemCode}}</td>
                 <td class="text-left">{{item.itemCategory}}</td>
                 <td class="text-left">{{item.PartMake}}</td>

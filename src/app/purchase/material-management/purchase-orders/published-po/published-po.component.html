@@ -71,9 +71,10 @@
               <thead class="tbl-head">
                 <tr>
                   <th class="text-left">PO Ref</th>
+                  <th class="text-left">GRN Reference</th>
                   <th class="text-left">Vendor Name</th>
                   <th class="text-center">PO Date</th>
-                  <th class="text-left">InVoice#</th>
+                  <th class="text-left">Invoice#</th>
                   <th class="text-center">Requisition</th>
                   <th class="text-center">Items</th>
                   <th class="text-left">Amount</th>
@@ -91,6 +92,7 @@
               <tbody>
                 <tr *ngFor="let item of items">
                   <td class="text-left">{{item.poref}}</td>
+                  <td class="text-left" style="color: blue;cursor: pointer;">{{item.ref}}</td>
                   <td class="text-left">{{item.Name}}</td>
                   <td class="text-center">{{item.podate}}</td>
                   <td class="text-left"  >{{item.InVoice}}</td>
@@ -127,7 +129,7 @@
                      <i class="fa fa-times fa-2x" aria-hidden="true"></i>
                     </a>
 
-                    <a  style="cursor: pointer;margin-right:10px; " matTooltip="Send">
+                    <a  style="cursor: pointer;margin-right:10px; " matTooltip="Re Send">
                       <mat-icon style="color: green;font-size: 22px;" >send</mat-icon>
                     </a>
                     

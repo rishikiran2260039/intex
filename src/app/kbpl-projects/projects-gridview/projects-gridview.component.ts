@@ -19,7 +19,13 @@ const FileSaver = require('file-saver');
   styleUrls: ['./projects-gridview.component.scss']
 })
 export class ProjectsGridviewComponent implements OnInit {
-
+  public popoverTitle: string = 'Confirm Delete';
+  public popoverMessage: string = 'Are you sure you want to delete this.?';
+  public popoverStatusTitle: string = 'Confirm Status Change';
+  public popoverStatusMessage: string = 'Are you sure you want to change this.?';
+  public cancelClicked: boolean = false;
+  public popoversendMessage: 'Are you sure you want to send.?'
+  public popoversendTitle: string = 'Confirm Delete';
   constructor(public dialog: MatDialog,private titleService: Title) { }
   public setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);

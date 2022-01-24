@@ -17,11 +17,11 @@ export class ItemsAndQuotesPopupQuotationsComponent implements OnInit {
   }
   
   items = [
-    { ItemName : "Tambour Cupboards",value:200, ItemCode: "TBCS", Quotes: "3",status:"Review",approvedvendor:"Usha International Ltd", quantity:150 },
-    { ItemName : "Filing Cabinets",value:400, ItemCode: "FGCS",Quotes: "4",status:"Closed",approvedvendor:"Mallikarjuna Rao", quantity : 181 },
-    { ItemName : "Planter Boxes",value:100, ItemCode: "PRBS",Quotes: "4",status:"Pending",approvedvendor:"Arnold D Cruz", quantity: 142 },
-    { ItemName : "Artificial Plants",value:300, ItemCode: "ALPS",Quotes: "5",status:"Closed",approvedvendor:"Axel adler", quantity: 158},
-    { ItemName : "Galvanised Steel Inserts",value:500, ItemCode: "GVST",Quotes: "3",status:"Review",approvedvendor:"Usha International Ltd", quantity: 178},
+    { lvalue:"180",ref:"OM/BHL/OCT/19-20/1077",date:"28-Feb-2019",ItemName : "Tambour Cupboards",value:200, ItemCode: "TBCS", Quotes: "3",status:"Pending",approvedvendor:"-", quantity:150 },
+    { lvalue:"360",ref:"OM/BHL/OCT/19-20/1078",date:"25-Apr-2020",ItemName : "Filing Cabinets",value:400, ItemCode: "FGCS",Quotes: "4",status:"Closed",approvedvendor:"Mallikarjuna Rao", quantity : 181 },
+    { lvalue:"80",ref:"OM/BHL/OCT/19-20/1079",date:"11-Feb-2019",ItemName : "Planter Boxes",value:100, ItemCode: "PRBS",Quotes: "4",status:"Pending",approvedvendor:"-", quantity: 142 },
+    { lvalue:"290",ref:"OM/BHL/OCT/19-20/1080",date:"06-Feb-2021",ItemName : "Artificial Plants",value:300, ItemCode: "ALPS",Quotes: "5",status:"Closed",approvedvendor:"Axel adler", quantity: 158},
+    { lvalue:"450",ref:"OM/BHL/OCT/19-20/1081",date:"30-Mar-2021",ItemName : "Galvanised Steel Inserts",value:500, ItemCode: "GVST",Quotes: "3",status:"Pending",approvedvendor:"-", quantity: 178},
   ]
 
   close(){

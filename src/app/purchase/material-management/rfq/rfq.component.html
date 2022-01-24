@@ -199,44 +199,37 @@ style="border-radius: 5px;    background-image: linear-gradient(to top, #f3f3f1 
   <div class="flex-p">
       <div class="row wrap">
           <div class="col-sm-12 no-padding">
-              <div class="row-wrap">
                   <div class="w-100">
-                      <div class="row">
-                          <div class="col-xs-12">
-                            <div class="col-xs-6">
-                              
-                            </div>
-                            
-                            <div class="col-xs-6">
-                                <div class="row">
-                                    <div class="col-xs-9 ">
+                      <div class="row">  
+                            <div class="col-xs-12" style="margin-left: 32%;">
+                                  <div class="col-xs-2" style="margin-top: 10px;">
+                                    
+                                  </div>  
+                                    <div class="col-xs-5">
                                       <div class="form-group " style="margin-top: 10px;">
-                                        <!-- <p class="control-label col-sm-4 add-member-label" style="margin-top: 10px;" >
-                                          Search by key word :</p> -->
                                         <div class="col-sm-5 pull-right"> 
                                           <input class="search__input" style=" width:120%" type="text" placeholder="Search by keyword">  </div>
                                       </div>
-                                      <!-- <button mat-raised-button class="pull-right  btn-success col-sm-2"  >
-                                         GO
-                                      </button> -->
                                     </div>
-                                    <div class="col-xs-3 ">
-                                      <div class="flex-p">
-                                         <button mat-raised-button 
-                                         class="pull-right  btn-primary" 
-                                         (click)="AddrfqPopup(null)" style="margin-right: 7px !important;">
-                                          <mat-icon>add</mat-icon> 
-                                          Submit RFQ
-                                          </button>
-                                        
-                                      </div>
+                                    <div class="col-xs-5 " style="margin-top: 10px;"> 
+                                      <button mat-raised-button class="btn-primary "
+                                      (click)="openGridColumnsDialog()"> 
+                                      <mat-icon>grid_on</mat-icon> Grid Columns
+                                       </button>
+                                       <button mat-raised-button class="btn-primary" style="margin-left: 5px;" 
+                                       routerLink="/purchase/procurement/rfq/rfq-form">
+                                        <mat-icon>add</mat-icon>  RFQ Form
+                                        </button>
+                                        <button mat-raised-button class="btn-primary" style="margin-left: 5px;" 
+                                        (click)="AddrfqPopup(null)">
+                                         <mat-icon>add</mat-icon>  Submit RFQ
+                                         </button>
                                     </div>
-                                  </div>
+                                 
                               </div>
-                          </div>
                       </div>
                   </div>
-              </div>
+            
           </div>
       </div>
   </div>
@@ -298,6 +291,7 @@ style="border-radius: 5px;    background-image: linear-gradient(to top, #f3f3f1 
                   <th class="text-center">Closure Date</th>
                   <th class="text-center">Items</th>
                   <th class="text-center">Quotes</th>
+                  <th class="text-center">Quotation Doc</th>
                   <th class="text-left" >Remarks</th>
                   <th class="text-center">Status</th>
                   </tr>
@@ -312,7 +306,7 @@ style="border-radius: 5px;    background-image: linear-gradient(to top, #f3f3f1 
                       <i class="fa fa-edit" style="color: cornflowerblue"></i>
                     </a>
                     <a><i class="fa fa-trash red" matTooltip="Delete Item" style="cursor: pointer;"></i></a>
-                    <a><i class="fa fa-arrow-right" matTooltip="Convert to Quotes" style="cursor: pointer; margin-left: 11px;" aria-hidden="true"></i></a>
+                    <a><i class="fa fa-arrow-right" matTooltip="publish" style="cursor: pointer; margin-left: 11px;" aria-hidden="true"></i></a>
                   </td>
                   
                   <td  style="text-align: left!important;"  >
@@ -331,6 +325,14 @@ style="border-radius: 5px;    background-image: linear-gradient(to top, #f3f3f1 
                     <td class="text-center"  
                   style="text-align: center !important;cursor: pointer;
                   color: blue;" routerLink="/purchase/procurement/rfq/rfqquotesscreen"  >{{item.Quotes }}</td>
+                  <td class="text-center editDel">
+                    <a style="cursor: pointer; " matTooltip="Add Doc"
+                    (click)="addrequisition(item)">
+                      <i class="fa fa-plus" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-file" matTooltip="View Doc" style="cursor: pointer; color: cornflowerblue;" aria-hidden="true"></i></a>
+                    <a><i class="fa fa-trash red" matTooltip="Delete Doc" style="cursor: pointer;"></i></a>
+                  </td>
                 
                 <td class="text-left"  >{{item.remarks}}</td>
                

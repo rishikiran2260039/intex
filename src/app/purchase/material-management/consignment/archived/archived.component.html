@@ -67,9 +67,9 @@
     <div id="grid-table-container" class="table-responsive" >
       <table matSort id="example2" class="table table-bordered table-hover" style="margin-left: 0px!important;">
         <thead class="tbl-head">
-          <tr _ngcontent-c21="" class="custom-thead-budget">
+          <tr _ngcontent-c21="" class="custom-thead-budget"> 
             <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">Consignment Reference</th>
-            <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">GRN</th>
+            <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">GRN Reference</th>
             <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">Date Shipped</th>
             <th _ngcontent-c21="" style="min-width: 100px;" class="text-center" >Items</th>
 
@@ -78,7 +78,6 @@
             <th _ngcontent-c21="" style="min-width: 80px;">Delivery Date</th>
            
              <th _ngcontent-c21="" class="text-center" style="min-width: 100px;" >Invoice</th>
-            <th _ngcontent-c21="" class="text-center" style="min-width: 80px;">Con. Details</th>
 
             
             <th _ngcontent-c21="" class="text-center" style="min-width: 80px;">Actions</th>
@@ -91,7 +90,7 @@
 
           <tr>
             <td class="text-center">DEL1037272/768</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2077</td>
             <td class="text-center">16-07-2021</td>
             <td class="text-center" (click)="Itempop()"  style="color: blue;cursor: pointer;">5</td>
 
@@ -99,16 +98,23 @@
             <!-- <td class="text-center">13-Feb-2019</td> -->
             <td class="text-center">09-08-2021</td>
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">1</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
             
-            
-            <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+            <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
               <!-- <td class="text-center" (click)="approvaldialog()" style="color: blue;cursor: pointer;" matTooltip="View Approval"></td> -->
           </tr>
 
           <tr>
             <td class="text-center">DEL1037272/786</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2078</td>
             <td class="text-center">26-07-2021</td>
             <td class="text-center" (click)="Itempop()"  style="color: blue;cursor: pointer;">2</td>
 
@@ -118,17 +124,24 @@
             <!-- <td class="text-center" (click)="Itempop()" style="cursor: pointer" >2</td> -->
             <td class="text-center">04-08-2021</td>
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">4</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
 
-            
-            <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+            <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
 
             <!-- <td class="text-center" (click)="approvaldialog()" style="color: blue;cursor: pointer;" matTooltip="View Approval"></td> -->
           </tr>
           
           <tr>
             <td class="text-center">DEL1037272/732</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2080</td>
             <td class="text-center">24-07-2021</td>
             <td class="text-center" (click)="Itempop()"  style="color: blue;cursor: pointer;">6</td>
 
@@ -138,18 +151,25 @@
             
             <td class="text-center">01-08-2021</td>
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">3</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
 
 
-            
-            <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+            <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
 
             <!-- <td class="text-center" (click)="approvaldialog()" style="color: blue;cursor: pointer;" matTooltip="View Approval"></td> -->
           </tr>
           
           <tr>
             <td class="text-center">DEL1037272/616</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2081</td>
             <td class="text-center">09-07-2021</td>
             <td class="text-center" (click)="Itempop()" style="cursor: pointer;color: blue;">8</td>
 
@@ -158,17 +178,24 @@
             <!-- <td class="text-center">13-Feb-2019</td> -->
             <td class="text-center">02-08-2021</td>
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">4</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
 
-            
-            <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+            <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
 
             <!-- <td class="text-center" (click)="approvaldialog()" style="color: blue;cursor: pointer;" matTooltip="View Approval"></td> -->
           </tr>
 
           <tr>
             <td class="text-center">DEL1037272/321</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2082</td>
             <td class="text-center">10-07-2021</td>
             <td class="text-center" (click)="Itempop()" style="cursor: pointer;color: blue;">9</td>
 
@@ -177,10 +204,17 @@
             
             <td class="text-center">03-08-2021</td>
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">9</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
 
-            
-                                <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+                                <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
 
                                 <!-- <a  style="cursor: pointer;margin-right:10px; " matTooltip="Send">
                                   <mat-icon style="color: green;font-size: 22px;" >send</mat-icon></a> -->
@@ -263,7 +297,7 @@
         <thead class="tbl-head">
           <tr _ngcontent-c21="" class="custom-thead-budget">
             <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">Consignment Reference</th>
-            <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">GRN</th>
+            <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">GRN Reference</th>
             <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">Date Shipped</th>
             <th _ngcontent-c21="" style="min-width: 100px;" class="text-center" >Items</th>
 
@@ -272,7 +306,6 @@
             <th _ngcontent-c21="" style="min-width: 80px;">Delivery Date</th>
            
              <th _ngcontent-c21="" class="text-center" style="min-width: 100px;" >Invoice</th>
-            <th _ngcontent-c21="" class="text-center" style="min-width: 80px;">Con. Details</th>
 
             
             <th _ngcontent-c21="" class="text-center" style="min-width: 80px;">Actions</th>
@@ -285,7 +318,7 @@
 
           <tr>
             <td class="text-center">DEL1037272/768</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2077</td>
             <td class="text-center">16-07-2021</td>
             <td class="text-center" (click)="Itempop()"  style="color: blue;cursor: pointer;">5</td>
 
@@ -294,16 +327,23 @@
             <td class="text-center">09-08-2021</td>
 
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">2</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
             
-            
-            <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+            <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
               <!-- <td class="text-center" (click)="approvaldialog()" style="color: blue;cursor: pointer;" matTooltip="View Approval"></td> -->
           </tr>
 
           <tr>
             <td class="text-center">DEL1037272/786</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2078</td>
             <td class="text-center">26-07-2021</td>
             <td class="text-center" (click)="Itempop()"  style="color: blue;cursor: pointer;">2</td>
 
@@ -313,17 +353,24 @@
             <!-- <td class="text-center" (click)="Itempop()" style="cursor: pointer" >2</td> -->
             <td class="text-center">04-08-2021</td>
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">3</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
 
-            
-            <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+            <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
 
             <!-- <td class="text-center" (click)="approvaldialog()" style="color: blue;cursor: pointer;" matTooltip="View Approval"></td> -->
           </tr>
           
           <tr>
             <td class="text-center">DEL1037272/732</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2080</td>
             <td class="text-center">24-07-2021</td>
             <td class="text-center" (click)="Itempop()"  style="color: blue;cursor: pointer;">6</td>
 
@@ -333,18 +380,25 @@
             
             <td class="text-center">01-08-2021</td>
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">1</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
 
 
-            
-            <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+            <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
 
             <!-- <td class="text-center" (click)="approvaldialog()" style="color: blue;cursor: pointer;" matTooltip="View Approval"></td> -->
           </tr>
           
           <tr>
             <td class="text-center">DEL1037272/616</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2081</td>
             <td class="text-center">09-07-2021</td>
             <td class="text-center" (click)="Itempop()" style="cursor: pointer;color: blue;">8</td>
 
@@ -353,17 +407,24 @@
             <!-- <td class="text-center">13-Feb-2019</td> -->
             <td class="text-center">02-08-2021</td>
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">4</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
 
-            
-            <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+            <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
 
             <!-- <td class="text-center" (click)="approvaldialog()" style="color: blue;cursor: pointer;" matTooltip="View Approval"></td> -->
           </tr>
 
           <tr>
             <td class="text-center">DEL1037272/321</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2082</td>
             <td class="text-center">10-07-2021</td>
             <td class="text-center" (click)="Itempop()" style="cursor: pointer;color: blue;">9</td>
 
@@ -372,10 +433,17 @@
             
             <td class="text-center">03-08-2021</td>
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">5</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
 
-            
-                                <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+                                <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
 
                                 <!-- <a  style="cursor: pointer;margin-right:10px; " matTooltip="Send">
                                   <mat-icon style="color: green;font-size: 22px;" >send</mat-icon></a> -->
@@ -460,7 +528,7 @@
         <thead class="tbl-head">
           <tr _ngcontent-c21="" class="custom-thead-budget">
             <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">Consignment Reference</th>
-            <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">GRN</th>
+            <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">GRN Reference</th>
             <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">Date Shipped</th>
             <th _ngcontent-c21="" style="min-width: 100px;" class="text-center" >Items</th>
 
@@ -468,7 +536,6 @@
             
             <th _ngcontent-c21="" style="min-width: 80px;">Delivery Date</th>
              <th _ngcontent-c21="" class="text-center" style="min-width: 100px;" >Invoice</th>
-            <th _ngcontent-c21="" class="text-center" style="min-width: 80px;">Con. Details</th>
 
             
             <th _ngcontent-c21="" class="text-center" style="min-width: 80px;">Actions</th>
@@ -481,7 +548,7 @@
 
           <tr>
             <td class="text-center">DEL1037272/768</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2077</td>
             <td class="text-center">16-07-2021</td>
             <td class="text-center" (click)="Itempop()"  style="color: blue;cursor: pointer;">5</td>
 
@@ -490,16 +557,23 @@
             <td class="text-center">09-08-2021</td>
 
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">6</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
             
-            
-            <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+            <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
               <!-- <td class="text-center" (click)="approvaldialog()" style="color: blue;cursor: pointer;" matTooltip="View Approval"></td> -->
           </tr>
 
           <tr>
             <td class="text-center">DEL1037272/786</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2078</td>
               <td class="text-center">26-07-2021</td>
             <td class="text-center" (click)="Itempop()"  style="color: blue;cursor: pointer;">2</td>
 
@@ -509,17 +583,24 @@
             <!-- <td class="text-center" (click)="Itempop()" style="cursor: pointer" >2</td> -->
             <td class="text-center">04-08-2021</td>
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">7</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
 
-            
-            <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+            <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
 
             <!-- <td class="text-center" (click)="approvaldialog()" style="color: blue;cursor: pointer;" matTooltip="View Approval"></td> -->
           </tr>
           
           <tr>
             <td class="text-center">DEL1037272/732</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2079</td>
             <td class="text-center">24-07-2021</td>
             <td class="text-center" (click)="Itempop()"  style="color: blue;cursor: pointer;">6</td>
 
@@ -529,18 +610,25 @@
             
             <td class="text-center">01-08-2021</td>
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">3</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
 
 
-            
-            <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+            <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
 
             <!-- <td class="text-center" (click)="approvaldialog()" style="color: blue;cursor: pointer;" matTooltip="View Approval"></td> -->
           </tr>
           
           <tr>
             <td class="text-center">DEL1037272/616</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2080</td>
             <td class="text-center">09-07-2021</td>
             <td class="text-center" (click)="Itempop()" style="cursor: pointer;color: blue;">8</td>
 
@@ -549,17 +637,24 @@
             <!-- <td class="text-center">13-Feb-2019</td> -->
             <td class="text-center">02-08-2021</td>
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">2</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
 
-            
-            <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+            <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
 
             <!-- <td class="text-center" (click)="approvaldialog()" style="color: blue;cursor: pointer;" matTooltip="View Approval"></td> -->
           </tr>
 
           <tr>
             <td class="text-center">DEL1037272/321</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2081</td>
             <td class="text-center">10-07-2021</td>
             <td class="text-center" (click)="Itempop()" style="cursor: pointer;color: blue;">9</td>
 
@@ -568,10 +663,17 @@
             
             <td class="text-center">03-08-2021</td>
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">6</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
 
-            
-                                <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+                                <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
 
                                 <!-- <a  style="cursor: pointer;margin-right:10px; " matTooltip="Send">
                                   <mat-icon style="color: green;font-size: 22px;" >send</mat-icon></a> -->
@@ -655,7 +757,7 @@
         <thead class="tbl-head">
           <tr _ngcontent-c21="" class="custom-thead-budget">
             <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">Consignment Reference</th>
-            <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">GRN</th>
+            <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">GRN Reference</th>
             <th _ngcontent-c21="" class="text-center" style="min-width: 200px;">Date Shipped</th>
             <th _ngcontent-c21="" style="min-width: 100px;" class="text-center" >Items</th>
 
@@ -663,7 +765,6 @@
             
             <th _ngcontent-c21="" style="min-width: 80px;">Delivery Date</th>
              <th _ngcontent-c21="" class="text-center" style="min-width: 100px;" >Invoice</th>
-            <th _ngcontent-c21="" class="text-center" style="min-width: 80px;">Con. Details</th>
 
             
             <th _ngcontent-c21="" class="text-center" style="min-width: 80px;">Actions</th>
@@ -676,7 +777,7 @@
 
           <tr>
             <td class="text-center">DEL1037272/768</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2077</td>
             <td class="text-center">16-07-2021</td>
             <td class="text-center" (click)="Itempop()"  style="color: blue;cursor: pointer;">5</td>
 
@@ -685,16 +786,23 @@
             <td class="text-center">09-08-2021</td>
 
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">5</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
             
-            
-            <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+            <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
               <!-- <td class="text-center" (click)="approvaldialog()" style="color: blue;cursor: pointer;" matTooltip="View Approval"></td> -->
           </tr>
 
           <tr>
             <td class="text-center">DEL1037272/786</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2078</td>
             <td class="text-center">26-07-2021</td>
             <td class="text-center" (click)="Itempop()"  style="color: blue;cursor: pointer;">2</td>
 
@@ -704,17 +812,24 @@
             <!-- <td class="text-center" (click)="Itempop()" style="cursor: pointer" >2</td> -->
             <td class="text-center">04-08-2021</td>
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">2</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
 
-            
-            <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+            <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
 
             <!-- <td class="text-center" (click)="approvaldialog()" style="color: blue;cursor: pointer;" matTooltip="View Approval"></td> -->
           </tr>
           
           <tr>
             <td class="text-center">DEL1037272/732</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2079</td>
             <td class="text-center">24-07-2021</td>
             <td class="text-center" (click)="Itempop()"  style="color: blue;cursor: pointer;">6</td>
 
@@ -724,18 +839,25 @@
             
             <td class="text-center">01-08-2021</td>
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">4</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
 
-
-            
-            <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+<!--             
+            <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
 
             <!-- <td class="text-center" (click)="approvaldialog()" style="color: blue;cursor: pointer;" matTooltip="View Approval"></td> -->
           </tr>
           
           <tr>
             <td class="text-center">DEL1037272/616</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2080</td>
             <td class="text-center">09-07-2021</td>
             <td class="text-center" (click)="Itempop()" style="cursor: pointer;color: blue;">8</td>
 
@@ -744,17 +866,24 @@
             <!-- <td class="text-center">13-Feb-2019</td> -->
             <td class="text-center">02-08-2021</td>
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">7</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
 
-            
-            <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+            <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
 
             <!-- <td class="text-center" (click)="approvaldialog()" style="color: blue;cursor: pointer;" matTooltip="View Approval"></td> -->
           </tr>
 
           <tr>
             <td class="text-center">DEL1037272/321</td>
-            <td class="text-center"><input type="checkbox" (change)="grnpopup($event)"></td>
+            <td class="text-center" style="color: blue;">GRN/BHL/OCT/19-20/2081</td>
             <td class="text-center">10-07-2021</td>
             <td class="text-center" (click)="Itempop()" style="cursor: pointer;color: blue;">9</td>
 
@@ -763,10 +892,17 @@
             
             <td class="text-center">03-08-2021</td>
             <td class="text-center" (click)="invoicepopup()" style="cursor: pointer; color: blue">5</td>
-            <td class="text-center"  style="color: blue; cursor: pointer;"><a routerLink="/purchase/procurement/consignments/active/WayBillRequistionPackingList/overview" style="color: blue;">View</a></td>
 
-            
-                                <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td>
+            <td class="text-center"  style="cursor: pointer"  >
+              <!-- <mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  > -->
+              <a style="cursor: pointer; " matTooltip="Edit Archive"
+                    (click)=" Editquotationspopup()">
+                      <i class="fa fa-edit fa-lg" style="color: cornflowerblue"></i>
+                    </a>
+                    <a><i class="fa fa-trash fa-lg red" matTooltip="Delete Archive" style="cursor: pointer;"></i></a>
+                    <a><i class="fa fa-archive fa-lg" matTooltip="Send to Archive" style="cursor: pointer;"></i></a>
+              </td>
+                                <!-- <td class="text-center"  style="cursor: pointer"  ><mat-icon mat-raised-button matTooltip="Send To Archive"  > move_to_inbox </mat-icon  ></td> -->
 
                                 <!-- <a  style="cursor: pointer;margin-right:10px; " matTooltip="Send">
                                   <mat-icon style="color: green;font-size: 22px;" >send</mat-icon></a> -->

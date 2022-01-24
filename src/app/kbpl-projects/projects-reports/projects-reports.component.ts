@@ -61,7 +61,7 @@ export class ProjectsReportsComponent implements OnInit {
     public popoverTitle: string = 'Confirm Delete';
     public popoverMessage: string = 'Are you sure you want to delete this.?';
     public popoverStatusTitle: string = 'Confirm Status Change';
-    public popoverStatusMessage: string = 'Are you sure you want to change status.?';
+    public popoverStatusMessage: string = 'Are you sure you want to change this.?';
     public cancelClicked: boolean = false;
     public popoversendMessage: 'Are you sure you want to send.?'
     public popoversendTitle: string = 'Confirm Delete';
@@ -83,12 +83,9 @@ export class ProjectsReportsComponent implements OnInit {
 
   ngOnInit() {
     this.getAllUsers();
-    console.log(this.router.url);
-  if(this.router.url.split("/")[0] =='' )
-  {
-
-  }
-    this.daily('daily')
+    console.log(this.router.url.split("/"));
+    let check = this.router.url.split("/").length;
+    this.daily(this.router.url.split("/")[check - 1])
   }
 daily(item)
 {

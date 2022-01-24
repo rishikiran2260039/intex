@@ -296,11 +296,11 @@ invoicepopup(){
     
   }
   items = [
-    { consignment_reference: "DEL1037272/768", Date_Shipped: "16-07-2021", con_Items: "5",Status: 1,stageColour: '#00ff0040',Purchase_Orders:"3",Delivery_Date:"09-08-2021",Invoice:"1",Con_Details:"view"},
-    { consignment_reference: "DEL1037272/786", Date_Shipped: "26-07-2021", con_Items: "2",Status: 2,stageColour: '#C0C0C0',Purchase_Orders:"9",Delivery_Date:"04-08-2021",Invoice:"4",Con_Details:"view"},
-    { consignment_reference: "DEL1037272/732", Date_Shipped: "24-07-2021", con_Items: "6",Status: 3,stageColour: '#87CEFA',Purchase_Orders:"7",Delivery_Date:"01-08-2021",Invoice:"3",Con_Details:"view"},
-    { consignment_reference: "DEL1037272/616", Date_Shipped: "09-07-2021", con_Items: "8",Status: 4,stageColour: '#FFA50069',Purchase_Orders:"3",Delivery_Date:"02-08-2021",Invoice:"8",Con_Details:"view"},
-    { consignment_reference: "DEL1037272/321", Date_Shipped: "10-07-2021", con_Items: "9",Status: 5,stageColour: '#ee420dfb',Purchase_Orders:"2",Delivery_Date:"03-08-2021",Invoice:"4",Con_Details:"view"},
+    { gref:"GRN/BHL/OCT/19-20/2077",consignment_reference: "DEL1037272/768", Date_Shipped: "16-07-2021", con_Items: "5",Status: 1,stageColour: '#00ff0040',Purchase_Orders:"3",Delivery_Date:"09-08-2021",Invoice:"1",Con_Details:"view"},
+    { gref:"GRN/BHL/OCT/19-20/2078",consignment_reference: "DEL1037272/786", Date_Shipped: "26-07-2021", con_Items: "2",Status: 2,stageColour: '#C0C0C0',Purchase_Orders:"9",Delivery_Date:"04-08-2021",Invoice:"4",Con_Details:"view"},
+    { gref:"GRN/BHL/OCT/19-20/2079",consignment_reference: "DEL1037272/732", Date_Shipped: "24-07-2021", con_Items: "6",Status: 3,stageColour: '#87CEFA',Purchase_Orders:"7",Delivery_Date:"01-08-2021",Invoice:"3",Con_Details:"view"},
+    { gref:"GRN/BHL/OCT/19-20/2080",consignment_reference: "DEL1037272/616", Date_Shipped: "09-07-2021", con_Items: "8",Status: 4,stageColour: '#FFA50069',Purchase_Orders:"3",Delivery_Date:"02-08-2021",Invoice:"8",Con_Details:"view"},
+    { gref:"GRN/BHL/OCT/19-20/2081",consignment_reference: "DEL1037272/321", Date_Shipped: "10-07-2021", con_Items: "9",Status: 5,stageColour: '#ee420dfb',Purchase_Orders:"2",Delivery_Date:"03-08-2021",Invoice:"4",Con_Details:"view"},
     
     
   ];

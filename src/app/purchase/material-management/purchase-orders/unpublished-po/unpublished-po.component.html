@@ -85,6 +85,7 @@
                   <th class="text-center">Delivery Date</th>
                   <th class="text-center">Approval</th>
                   <th class="text-center">Terms</th>
+                  <th class="text-center">Docs</th>
                   <th class="text-center" style="width: 112px!important;">
                     Actions</th>
                 </tr>
@@ -102,7 +103,14 @@
                   <td class="text-center"><input type="checkbox" ></td>
 
                   <td class="text-center"   style="color: blue;cursor: pointer;" routerLink="/purchase/procurement/purchase-orders/unpublished-po/TermsTemplatePurchase">{{item.Terms}}</td>
-                  
+                  <td class="text-center editDel">
+                    <a style="cursor: pointer; " matTooltip="Add Doc"
+                    (click)="addrequisition(item)">
+                      <i class="fa fa-plus" style="color: cornflowerblue"></i>
+                    </a>
+                    <!-- <a><i class="fa fa-file" matTooltip="View Doc" style="cursor: pointer; color: cornflowerblue;" aria-hidden="true"></i></a>
+                    <a><i class="fa fa-trash red" matTooltip="Delete Doc" style="cursor: pointer;"></i></a> -->
+                  </td>
                   <td class="text-center ">
                    
                     <a style="cursor: pointer;margin-right:10px; " routerLink="/purchase/PublishPurchaseorderRevise/PreviewSubmissionRevise"  matTooltip="View">
