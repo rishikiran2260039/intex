@@ -1,0 +1,421 @@
+<div fxLayout="row" style="margin-top: 15px;">
+  <div class=" col-lg-3">
+    <div class="flex-p">
+      <mat-card style="background-color: #007ad914;">
+        <mat-icon style="font-size: 50px;margin-top: 10px; color: #007ad9;">business_center</mat-icon>
+        <mat-card-header style="margin-left:120px">
+
+          <mat-card-subtitle style="margin-top: -65px;">
+            <h2>$51,000</h2>
+          </mat-card-subtitle>
+          <mat-card-subtitle>
+            <h3>Budget</h3>
+          </mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="col-lg-3">
+    <div class="flex-p">
+      <mat-card style="background-color: #0cf80c29;">
+        <mat-icon style="font-size: 50px;margin-top: 10px; color: green;">checklist</mat-icon>
+        <mat-card-header style="margin-left:140px">
+
+          <mat-card-subtitle style="margin-top: -65px;">
+            <h2>$46,380</h2>
+          </mat-card-subtitle>
+          <mat-card-subtitle>
+            <h4>Invoice Raised</h4>
+          </mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="flex-p">
+      <mat-card style="background-color: #ffd74099;">
+        <mat-icon style="font-size: 50px;margin-top: 10px; color: #bc970a;">attach_money</mat-icon>
+        <mat-card-header style="margin-left:140px">
+
+          <mat-card-subtitle style="margin-top: -65px">
+            <h2>$41,100</h2>
+          </mat-card-subtitle>
+          <mat-card-subtitle>
+            <h4>Invoice Recieved</h4>
+          </mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </div>
+  </div>
+  <div class="col-lg-3">
+    <div class="flex-p">
+      <mat-card style="background-color: #ffa5003b;">
+        <mat-icon style="font-size: 50px;margin-top: 10px; color: #ff6152;">money_off</mat-icon>
+        <mat-card-header style="margin-left:140px">
+          <mat-card-subtitle style="margin-top: -65px">
+            <h2>
+              $5,280
+            </h2>
+          </mat-card-subtitle>
+          <mat-card-subtitle>
+            <h3>Pending</h3>
+          </mat-card-subtitle>
+        </mat-card-header>
+
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<div class="row-wrap">
+  <div class="flex-p w-100">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="row" style="margin-bottom:7px;">
+          <div class="col-xs-6 ">
+            <div class="flex-p">
+              <app-kbpl-projects></app-kbpl-projects>
+            </div>
+          </div>
+          <div class="col-xs-6" style="padding-right: 18px !important;">
+            <div class="flex-p">
+              <button mat-raised-button class="pull-right  btn-primary" (click)="openAddProjectDialog(null)">
+                <mat-icon>add</mat-icon> Add Project
+              </button>
+              <button mat-raised-button class="pull-right  btn-primary margin-right-10"
+                (click)="openGridColumnsDialog()">
+                <mat-icon>grid_on</mat-icon> Grid Columns
+              </button>
+              <button mat-raised-button color="primary" class="pull-right filters-hover margin-right-10"
+                (click)="filterToggle = !filterToggle">
+                <mat-icon>filter_list</mat-icon> Filter
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div fxLayout="row wrap" *ngIf="filterToggle" style="margin-bottom: 10px">
+          <div fxFlex="100" fxFlex.gt-sm fxFlex.sm class="flex-p w-100 margins">
+            <mat-card class="filter">
+              <mat-card-content>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="col-sm-4 newMarginClass">
+                      Keyword:
+                    </div>
+                    <div class="col-sm-8">
+                      <input type="text" placeholder="Search by any record" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="col-sm-4 newMarginClass">
+                      Project Manager:
+                    </div>
+                    <div class="col-sm-8">
+                      <mat-select class="form-control" placeholder="Select Client">
+                        <mat-option [value]="0">Raj</mat-option>
+                        <mat-option [value]="1">Teja</mat-option>
+                        <mat-option [value]="2">Krishna</mat-option>
+                        <mat-option [value]="3">Sai</mat-option>
+                        <mat-option [value]="3">Neeraja</mat-option>
+                      </mat-select>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="col-sm-4 newMarginClass">
+                      Status:
+                    </div>
+                    <div class="col-sm-8">
+                      <mat-select class="form-control" placeholder="Select Status">
+                        <mat-option [value]="0">Initiated</mat-option>
+                        <mat-option [value]="1">In Progress</mat-option>
+                        <mat-option [value]="2">Awarded</mat-option>
+                        <mat-option [value]="3">Completed</mat-option>
+                        <mat-option [value]="3">On Hold</mat-option>
+                      </mat-select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row" style="padding-top:10px !important">
+                  <div class="col-sm-4" style="margin-top: 4px;">
+                    <div class="col-sm-4 newMarginClass">
+                      Date Type:
+                    </div>
+                    <mat-radio-group aria-label="Select an option">
+                      <mat-radio-button value="2" style="margin-left: 8px;" checked>Start </mat-radio-button>
+                      <mat-radio-button value="3" style="margin-left: 25px;">Target</mat-radio-button>
+                    </mat-radio-group>
+                    </div>
+                  <div class="col-sm-4">
+                    <div class="col-sm-4 newMarginClass">
+                      To Date:
+                    </div>
+                    <div class="col-sm-8">
+                      <input class="form-control" class="form-control" placeholder="MM/DD/YYYY" (keypress)="false"
+                        [owlDateTimeTrigger]="dt6" [owlDateTime]="dt6" name="dt6">
+                      <owl-date-time [pickerType]="'calendar'" #dt6></owl-date-time>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-4">
+                    <div class="col-sm-4 newMarginClass">
+                      From Date:
+                    </div>
+                    <div class="col-sm-8">
+                      <input class="form-control" class="form-control" placeholder="MM/DD/YYYY" (keypress)="false"
+                        [owlDateTimeTrigger]="dt7" [owlDateTime]="dt7" name="dt7">
+                      <owl-date-time [pickerType]="'calendar'" #dt7></owl-date-time>
+                    </div>
+                  </div>
+                </div>
+                <div class="row" style="padding-top:10px !important">
+                  <div class="col-lg-1" style="margin-left:80% !important;">
+                    <button mat-raised-button class="pull-right btn-primary">
+                      <mat-icon>youtube_searched_for</mat-icon> Search
+                    </button>
+
+                  </div>
+                  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="margin-left: -18px;">
+                    <button mat-raised-button style="background-color:#37474f; color:#fff !important;">
+                      <mat-icon>settings_backup_restore</mat-icon> Clear
+                    </button>
+
+                  </div>
+                  <a (click)="filterToggle = !filterToggle" class="pull-right"
+                    style="font-size: 25px; cursor: pointer; margin-left: 5px;">
+                    <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                  </a>
+
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top:20px">
+          <div class="col-xs-12" style="margin-left:10px">
+            <div id="grid-table-container" class="table-responsive" style="width:99.2%">
+              <table matSort id="example2" class="table table-bordered table-hover">
+                <thead class="tbl-head">
+                  <tr>
+                    <th class="text-left">Project #</th>
+                    <th>Project Name</th>
+                    <!-- <th>Contracts</th> -->
+                    <th>Project Manager</th>
+                    <th>Contact Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <!-- <th>Street Address</th> -->
+                    <th>State</th>
+                    <th>City</th>
+                    <th>Start Date</th>
+                    <th>Target Date</th>
+                    <th class="vert-align-mid" style="width: 107px;">Completion</th>
+                    <th>Handover</th>
+                    <th>Reports</th>
+                    <th>Budget</th>
+                    <th>Notes</th>
+                    <th>GST No</th>
+                    <th>SOW</th>
+                    <th>PO/WO No</th>
+                    <th>Insurance Details</th>
+                    <th>BG Details</th>
+                    <th>BOCW Details</th>
+
+                    <!-- <th>Documents</th>
+                    <th>Charter</th> -->
+                    <th class="text-center">Status</th>
+
+                    <th class="text-center" style="width: 112px!important;">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of values;let i = index">
+                    <td>{{item.projectcode}}</td>
+                    <td>
+                      <div>
+                        <a [routerLink]="['/purchase/procurement/indent'] " target="_blank"
+                          style="color: cornflowerblue;cursor: pointer;">{{item.projectname}}</a>
+                      </div>
+                    </td>
+
+                    <!-- <td class="text-center"><a style="color:blue" (click)="openContractsDialog()">{{item.contracts}}</a>
+                    </td> -->
+                    <td>{{item.projectmanager}}</td>
+                    <td>
+                      {{item.contact}}
+                    </td>
+                    <td>
+                      {{item.email}}
+
+                    </td>
+                    <td class="text-center">
+                      {{item.phone}}
+
+                    </td>
+                    <!-- <td>
+                      {{item.address}}
+
+                    </td> -->
+                    <td>
+                      {{item.state}}
+
+                    </td>
+                    <td>
+                      {{item.city}}
+
+                    </td>
+                    <td>
+                      {{item.startDate}}
+
+                    </td>
+                    <td>
+                      {{item.targetDate}}
+
+                    </td>
+                    <td>
+                      <div class="row"> 
+                        <div class="col-lg-12 text-center">
+                          <div class="row my-4">
+                            <div class="col-sm-12">
+                              <div class=" card-header rounded card-header-first"
+                                style="background-color: transparent;border: 0px;margin-top: -22px;">
+                                <div (click)="changeProgress(item.focus,i)" class="circle">
+                                  <div *ngIf="!item.focus || item.focus == 0">
+                                    <img src="assets/outlook/focus_3.png" alt="new">
+                                  </div>
+                                  <div *ngIf="item.focus == 25">
+                                    <img src="assets/outlook/focus_4.png" alt="weak">
+                                  </div>
+                                  <div *ngIf="item.focus == 50">
+                                    <img src="assets/outlook/focus_0.png" alt="okay">
+                                  </div>
+                                  <div *ngIf="item.focus == 75">
+                                    <img src="assets/outlook/focus_1.png" alt="good">
+                                  </div>
+                                  <div *ngIf="item.focus == 100">
+                                    <img src="assets/outlook/focus_2.png" alt="excellent">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td style="color: blue;cursor: pointer;" [routerLink]="['/projects/project-handover']">
+                      {{item.handover}}
+
+                    </td >
+                    <td style="color: blue;cursor: pointer;" [routerLink]="['/projects/project-reports']">
+                      {{item.reports}}
+
+                    </td>
+                    <td>
+                      {{item.budget}}</td>
+                      <td class="text-center" style="cursor:pointer;color: blue;" (click)="notes()"><mat-icon>info</mat-icon></td>
+        
+                      <td>
+                        {{item.gst}}
+  
+                      </td>
+                      <td class="text-center">
+                        <a style="color: blue;cursor: pointer;" *ngIf="item.sow == 'View'" target="_blank" href="http://www.africau.edu/images/default/sample.pdf" routerLinkActive="router-link-active" >View</a>
+                       
+                        <a mwlConfirmationPopover
+                        *ngIf="item.sow == 'View'" 
+                        [popoverTitle]="popoverTitle"
+                        [popoverMessage]="popoverMessage"
+                        placement="left"
+                        (confirm)="deleteUser()"
+                        (cancel)="cancelClicked = true"
+                       >
+                        <i style="cursor: pointer;" title="Delete User" class="fa fa-trash red"></i>
+                    </a>
+                    <a style="color: blue;cursor: pointer;" *ngIf="item.sow == 'Add'" (click)="uploaddoc()" routerLinkActive="router-link-active" >Add</a>
+                        
+                      </td>
+                      <td>
+                        {{item.sopo}}
+  
+                      </td>
+                      <td>
+                        {{item.Id}}
+  
+                      </td>
+                      <td class="text-center">
+                        <a style="color: blue;cursor: pointer;" *ngIf="item.sow == 'View'" target="_blank" href="http://www.africau.edu/images/default/sample.pdf" routerLinkActive="router-link-active" >View</a>
+                       
+                        <a mwlConfirmationPopover
+                        *ngIf="item.sow == 'View'" 
+                        [popoverTitle]="popoverTitle"
+                        [popoverMessage]="popoverMessage"
+                        placement="left"
+                        (confirm)="deleteUser()"
+                        (cancel)="cancelClicked = true"
+                       >
+                        <i style="cursor: pointer;" title="Delete User" class="fa fa-trash red"></i>
+                    </a>
+                    <a style="color: blue;cursor: pointer;" *ngIf="item.sow == 'Add'" (click)="uploaddoc()" routerLinkActive="router-link-active" >Add</a>
+                        
+                      </td>
+                      <td class="text-center">
+                        <a style="color: blue;cursor: pointer;" *ngIf="item.sow == 'View'" target="_blank" href="http://www.africau.edu/images/default/sample.pdf" routerLinkActive="router-link-active" >View</a>
+                       
+                        <a mwlConfirmationPopover
+                        *ngIf="item.sow == 'View'" 
+                        [popoverTitle]="popoverTitle"
+                        [popoverMessage]="popoverMessage"
+                        placement="left"
+                        (confirm)="deleteUser()"
+                        (cancel)="cancelClicked = true"
+                       >
+                        <i style="cursor: pointer;" title="Delete User" class="fa fa-trash red"></i>
+                    </a>
+                    <a style="color: blue;cursor: pointer;" *ngIf="item.sow == 'Add'" (click)="uploaddoc()" routerLinkActive="router-link-active" >Add</a>
+                        
+                      </td>
+
+                    <td style="text-align: center!important;">
+                      <mat-select [style.background]="item.stageColour" style="min-width: 120px;"
+                        [(value)]="item.Status" placeholder="--Select Stage --" class='form-control'>
+                        <ng-container *ngFor='let option of statusOptions'>
+                          <mat-option [style.background]="option.colorCode" class='option' [value]="option.value">
+                            {{option.name}}</mat-option>
+                        </ng-container>
+                      </mat-select>
+                    </td>
+
+                    <td class="text-center editDel">
+                      <a style="cursor: pointer;margin-right:0px;margin-left: -5px; " matTooltip="Update Project" (click)="openAddProjectDialog(item)">
+                        <i class="fa fa-edit" style="color: cornflowerblue"></i>
+                      </a>
+                      <!-- <a class="anchor" matTooltip="Add Notes" (click)="AddProjectNotes()" style=" margin-left:0px">
+                        <mat-icon style="cursor: pointer;color: #45c136f7;font-size: 20px;vertical-align: middle;">
+                          rate_review
+                        </mat-icon>
+                      </a> -->
+                      <!-- <a matTooltip="Add doc">
+                        <mat-icon style="cursor: pointer;color: #c466dbf7;font-size: 20px;vertical-align: middle;"
+                          (click)="opendocs()">note_add
+                        </mat-icon>
+                      </a> -->
+                      <a><i class="fa fa-trash red" matTooltip="Delete Project" style="cursor: pointer;"></i></a>
+                    </td>
+
+                  </tr>
+
+                </tbody>
+              </table>
+              <mat-paginator [length]="totalSize" [pageIndex]="currentPage" [pageSize]="pageSize"
+                [pageSizeOptions]="[5, 10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

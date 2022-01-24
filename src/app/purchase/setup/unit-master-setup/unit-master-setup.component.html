@@ -1,0 +1,50 @@
+<div class="row" style="margin-bottom:7px;margin-top: 10px;">
+  <div class="col-sm-6 ">
+
+  </div>
+  <div class="col-sm-6">
+        <button mat-raised-button class="pull-right add-hover btn-primary margin-right-10" (click)="openActionTypeDialog(null)">
+          <mat-icon>add</mat-icon> Add Action Type
+      </button>
+  </div>
+</div>
+
+<div class="row" style="margin-top: 20px;">
+<div class="col-sm-12">
+    <div id="grid-table-container" class="table-responsive">
+        <table matSort id="example2" class="table table-bordered table-hover">
+            <thead class="tbl-head">
+                <tr>
+                  <th>Unit Code</th>
+                  <th>Unit Description</th>
+                  <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of items">
+
+                  <td>{{item.code}}</td>
+                      
+                  <td>
+                      {{item.des}}
+                  </td>
+
+                  <td class="text-center">
+                      <a  class="edit-icon" (click)="openActionTypeDialog(item)">
+                          <i class="fa fa-edit"></i>
+                      </a>
+                      <a 
+                          class="delete-icon">
+                          <i class="fa fa-trash red"></i>
+                      </a>
+
+                  </td>
+
+                </tr>
+            </tbody>
+        </table>
+        <mat-paginator [length]="totalSize" [pageIndex]="currentPage" [pageSize]="pageSize"
+            [pageSizeOptions]="[5, 10, 25, 50, 100]" showFirstLastButtons></mat-paginator>
+    </div>
+</div>
+</div>

@@ -1,0 +1,30 @@
+<div class="NewHeader" style="background-color:#286ba5 !important; height: 50px;">
+  <h1 mat-dialog-title>
+    Add Work Hours
+  </h1>
+</div>
+
+<div mat-dialog-content>
+  <form class="form-horizontal">
+    <div style="padding: 0px 30px !important;">
+      <div class="form-group">
+        <div class="col-sm-12">
+          <label style="font-weight: bold;">
+            Asset Type:
+          </label>
+          <span style="font-weight: bold;">&nbsp;
+            {{data.type}}
+          </span>
+        </div>
+        <div class="col-sm-12">
+          <input type="number" class="form-control" placeholder="Enter Work Hours">
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<mat-dialog-actions align="end">
+
+  <button mat-raised-button class="btn-success" (click)="close()">Save</button>
+  <button mat-raised-button class="add-dark-hover btn-default" (click)="close()">Cancel</button>
+</mat-dialog-actions> 

@@ -1,0 +1,153 @@
+<div class="NewHeader">
+  <h1 mat-dialog-title>
+    {{data ? 'Update' : 'Add'}} Project
+  </h1>
+</div>
+<div mat-dialog-content >
+    <form class="form-horizontal">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <label class="control-label col-sm-4 add-member-label">Project Name: </label>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                <input type="text" class="form-control" placeholder="Enter Project Name">
+            </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4 add-member-label">Project #: </label>
+          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+              <input type="text" class="form-control" placeholder="Enter Project #">
+          </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-4 add-member-label">Project Manager: </label>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+           <mat-select class="form-control" placeholder="Select Project Manager">
+            <mat-option [value]="0">Raj</mat-option>
+            <mat-option [value]="1">Teja</mat-option>
+            <mat-option [value]="2">Krishna</mat-option>
+            <mat-option [value]="3">Sai</mat-option>
+            <mat-option [value]="3">Neeraja</mat-option>
+           </mat-select>
+        </div>
+    </div>
+      <div class="form-group">
+        <label class="control-label col-sm-4 add-member-label">Contact Name: </label>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+            <input type="text" class="form-control" placeholder="Enter Contact Name">
+        </div>
+    </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4 add-member-label">Email: </label>
+          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+              <input type="text" class="form-control" placeholder="Enter Email">
+          </div>
+      </div>
+            <div class="form-group">
+                <label class="control-label col-sm-4 add-member-label">Phone: </label>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                  <input type="number" class="form-control" placeholder="Enter Phone">
+    
+                </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-4 add-member-label">Start Date: </label>
+              <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                <input type="date" class="form-control" placeholder="Enter Start Date ">
+              </div>
+             </div>
+             <div class="form-group">
+              <label class="control-label col-sm-4 add-member-label">Target Date: </label>
+              <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                <input type="date" class="form-control" placeholder="Enter Target Date ">
+              </div>
+             </div>
+            <div class="form-group">
+              <label class="control-label col-sm-4 add-member-label">Street Address: </label>
+              <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                <input type="text" class="form-control" placeholder="Enter Street Address">
+    
+              </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-4 add-member-label">City: </label>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+               <mat-select class="form-control" placeholder="Select City">
+                 <mat-option [value]="0">Gurugram</mat-option>
+                 <mat-option [value]="1">Bangalore</mat-option>
+                 <mat-option [value]="2">Mumbai</mat-option>
+               </mat-select>
+            </div>
+        </div>
+        </div>
+        <div class="col-6">
+          <div class="form-group">
+            <label class="control-label col-sm-4 add-member-label">State: </label>
+            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+               <mat-select class="form-control" placeholder="Select State">
+                 <mat-option [value]="0">Haryana</mat-option>
+                 <mat-option [value]="1">Karnataka</mat-option>
+                 <mat-option [value]="2">Maharastra</mat-option>
+               </mat-select>
+            </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4 add-member-label">GST No: </label>
+          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+              <input type="text" class="form-control" placeholder="Enter GST No">
+          </div>
+      </div>
+      <!-- <div class="form-group">
+        <label class="control-label col-sm-4 add-member-label">Scope of Work: </label>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+            <input type="text" class="form-control" placeholder="Enter Scope of work">
+        </div>
+    </div> -->
+    <div class="form-group">
+      <label class="control-label col-sm-4 add-member-label">PO/WO No: </label>
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+          <input type="text" class="form-control" placeholder="Enter PO/WO No">
+      </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-sm-4 add-member-label">Insurance Details: </label>
+    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+        <input type="text" class="form-control" placeholder="Enter Insurance Details">
+    </div>
+</div>
+<!-- <div class="form-group">
+  <label class="control-label col-sm-4 add-member-label">BG Details: </label>
+  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+      <input type="text" class="form-control" placeholder="Enter BG Details">
+  </div>
+</div>
+<div class="form-group">
+  <label class="control-label col-sm-4 add-member-label">BOCW Details: </label>
+  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+      <input type="text" class="form-control" placeholder="Enter BOCW">
+  </div>
+</div> -->
+        <div class="form-group">
+          <label class="control-label col-sm-4 add-member-label">Budget: </label>
+          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+              <input type="text" class="form-control" placeholder="Enter Budget">
+          </div>
+      </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4 add-member-label">Notes: </label>
+          <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+            <textarea class="form-control" placeholder="Enter Notes" rows="2" style="resize: none;"></textarea>
+          </div>
+      </div>
+        </div>
+      </div>
+    
+   
+  
+    </form>
+</div>
+<mat-dialog-actions align="end">
+    <button mat-raised-button class="btn-primary"  [mat-dialog-close]="'test'"> <mat-icon>send</mat-icon><span
+             >Save</span></button>
+    <button mat-raised-button class="add-dark-hover btn-default" (click)="close()"><mat-icon>cancel</mat-icon>Close</button>
+</mat-dialog-actions> 

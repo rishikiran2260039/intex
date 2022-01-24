@@ -1,0 +1,62 @@
+<button mat-raised-button class="pull-right" type="button" color="primary" (click)="backClicked()" style="margin-top: 15px;margin-right: 10px;">
+           Back
+      </button>
+
+<div fxLayout="row wrap" style="margin-left: 13px;margin-top: 30px;">
+
+  <div class="table-responsive">
+      <h3 style="margin-bottom: 20px;">Completion : 3/5</h3>
+      <table id="example2" class="table table-bordered table-hover" style="width: 60%;">
+          <thead class="tbl-head">
+              <tr class="tr-grid-header">
+                
+                  <th>Subject</th>
+                  <th class="text-center">Done</th>
+                  <th class="text-center">Document</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let applicant of tableList">
+                
+                  <td>{{applicant.subject}}
+              
+                  </td>
+                  <td class="text-center">
+                    <input type="checkbox">
+                  </td>
+                  <td class="text-center">
+                    <a style="color: blue;cursor: pointer;" *ngIf="applicant.status == 'View'" target="_blank" href="http://www.africau.edu/images/default/sample.pdf" routerLinkActive="router-link-active" >{{applicant.status}}</a>
+                   
+                    <a mwlConfirmationPopover
+                    *ngIf="applicant.status == 'View'" 
+                    [popoverTitle]="popoverTitle"
+                    [popoverMessage]="popoverMessage"
+                    placement="left"
+                    (confirm)="deleteUser()"
+                    (cancel)="cancelClicked = true"
+                   >
+                    <i style="cursor: pointer;" title="Delete User" class="fa fa-trash red"></i>
+                </a>
+                <a style="color: blue;cursor: pointer;" *ngIf="applicant.status == 'Add'" (click)="uploaddoc()"  routerLinkActive="router-link-active" >Add</a>
+                    
+                  </td>
+              <!-- <td class="editDel text-center">
+                  <a title="Edit User" style="margin-right: 10px; cursor: pointer;" (click)="openEditDialog(applicant.intApplicantId)">
+                      <i class="fa fa-edit"></i>
+                  </a>
+                  <a mwlConfirmationPopover
+                  [popoverTitle]="popoverTitle"
+                  [popoverMessage]="popoverMessage"
+                  placement="left"
+                  (confirm)="deleteUser()"
+                  (cancel)="cancelClicked = true">
+                  <i style="cursor: pointer;" title="Delete User" class="fa fa-trash red"></i>
+              </a>
+              
+          </td> -->
+      </tr>
+  </tbody>
+</table>
+     
+  </div>
+</div>

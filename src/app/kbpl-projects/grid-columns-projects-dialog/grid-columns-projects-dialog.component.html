@@ -1,0 +1,38 @@
+<div class="NewHeader">
+  <h1 mat-dialog-title>Grid View Configuration </h1>
+</div> 
+<p>Please select the required columns in the grid, to view grid with specific columns</p>
+<div mat-dialog-content style="overflow:hidden!important;">
+  <form class="form-horizontal" novalidate  style="margin-top:10px">
+    <mat-checkbox  class="col-sm-4" >Project #</mat-checkbox>
+    <mat-checkbox  class="col-sm-4" >Project Name</mat-checkbox>
+    <mat-checkbox  class="col-sm-4" >Project Type</mat-checkbox>
+    <mat-checkbox  class="col-sm-4" >Project Manager</mat-checkbox>
+    <mat-checkbox  class="col-sm-4" >Contact Name</mat-checkbox>
+
+    <mat-checkbox  class="col-sm-4" >Email</mat-checkbox>
+    <mat-checkbox  class="col-sm-4" >Phone</mat-checkbox>
+    <mat-checkbox  class="col-sm-4" >Handover</mat-checkbox>
+    <mat-checkbox  class="col-sm-4" >Reports</mat-checkbox>
+    <mat-checkbox  class="col-sm-4" >Start Date</mat-checkbox>
+    <mat-checkbox  class="col-sm-4" >Target Date</mat-checkbox>
+
+    <mat-checkbox  class="col-sm-4" >Budget</mat-checkbox>
+    <mat-checkbox  class="col-sm-4" >GST No</mat-checkbox>
+    <mat-checkbox  class="col-sm-4" >Scope of Work</mat-checkbox>
+    <mat-checkbox  class="col-sm-4" >PO/WO No</mat-checkbox>
+    <mat-checkbox  class="col-sm-4" >Insurance Details,</mat-checkbox>
+    <mat-checkbox  class="col-sm-4" >BG details</mat-checkbox>
+    <mat-checkbox  class="col-sm-4" >BOCW details</mat-checkbox>
+    <mat-checkbox class="col-sm-4" >Status</mat-checkbox>
+    <mat-checkbox  class="col-sm-4" >Actions</mat-checkbox>
+   
+  </form>
+</div>
+
+<mat-dialog-actions align="end">
+  <button mat-raised-button class="btn-primary" (click)="close()"><mat-icon>send</mat-icon>Configure</button>
+  <button mat-raised-button class="CancelClass" (click)="close()"><mat-icon>cancel</mat-icon>Cancel</button>
+</mat-dialog-actions>
+
+

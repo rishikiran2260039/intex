@@ -1,0 +1,32 @@
+<div class="NewHeader" style="background-color:#286ba5 !important; height: 50px;">
+  <h1 mat-dialog-title>
+    Add Notes
+  </h1>
+</div>
+
+<div mat-dialog-content>
+  <form class="form-horizontal">
+    <div style="padding: 0px 30px !important;">
+      <div class="form-group">
+        <div class="col-sm-12">
+          <label style="font-weight: bold;">
+            STN Ref:
+          </label>
+          <span style="font-weight: bold;">&nbsp;
+            STO/OTP-OM/OCT-19/10001
+          </span>
+        </div>
+        <div class="col-sm-12">
+          <textarea type="text" maxlength="300" class="form-control" style="height: 150px;" >Stock transfer describes a process in warehouse logistics for moving goods from one part of the distribution chain to another. In general, the stock transfer is aimed at optimising the storage capacity according to certain strategies.</textarea>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<mat-dialog-actions align="end">
+
+  <button mat-raised-button class="btn-success" (click)="close()">Save</button>
+  <button mat-raised-button class="add-dark-hover btn-default" (click)="close()">Cancel</button>
+</mat-dialog-actions> 
+
+

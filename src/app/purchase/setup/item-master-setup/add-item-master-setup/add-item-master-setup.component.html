@@ -1,0 +1,125 @@
+<div class="NewHeader">
+  <h1 mat-dialog-title>
+     {{ data ? 'Update' : 'Add'}} New Item
+  </h1>
+</div>
+
+<div mat-dialog-content>
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-sm-4 add-member-label">Part name: </label>
+        <div class="col-sm-8 margin-bottom-15px">
+            <input type="text" class="form-control" placeholder="Enter Part name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-4 add-member-label">Part No: </label>
+        <div class="col-sm-8 margin-bottom-15px">
+            <input type="text" class="form-control" placeholder="Enter Part No">
+        </div>
+    </div>
+    <div class="form-group">
+     <label class="control-label col-sm-4 add-member-label">UOM: </label>
+     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 margin-bottom-15px">              
+            
+             <mat-select class="form-control" placeholder="Select UOM">
+               <mat-option [value]="0">
+                Micron	
+               </mat-option>
+               <mat-option [value]="1">
+                Watts
+               </mat-option>
+               <mat-option [value]="2">
+                Length	
+               </mat-option>
+               <mat-option [value]="0">
+                MM
+              </mat-option>
+              <mat-option [value]="1">
+                Feet
+              </mat-option>
+              <mat-option [value]="2">
+                Kg
+              </mat-option>
+              <mat-option [value]="2">
+                kg/m3
+              </mat-option>
+              <mat-option [value]="2">
+                Kg
+              </mat-option>
+             </mat-select>
+         
+     </div>
+    </div>
+    <div class="form-group">
+     <label class="control-label col-sm-4 add-member-label">Equipment Type: </label>
+     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 margin-bottom-15px">              
+            
+             <mat-select class="form-control" placeholder="Select equipment type" disabled>
+               <mat-option [value]="0">
+                 Backhole Loader
+               </mat-option>
+               <mat-option [value]="1">
+                 Bull Dozer
+               </mat-option>
+               <mat-option [value]="2">
+                 Dump truck
+               </mat-option>
+               <mat-option [value]="3">
+                 Car
+               </mat-option>
+               <mat-option [value]="4">
+                 Excavator
+               </mat-option>
+             </mat-select>
+         
+     </div>
+    </div>
+    <div class="form-group">
+     <label class="control-label col-sm-4 add-member-label">Make: </label>
+     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 margin-bottom-15px">              
+            
+             <mat-select class="form-control" placeholder="Select Make" disabled>
+               <mat-option [value]="0">
+                 Agx
+               </mat-option>
+               <mat-option [value]="1">
+                 Bags
+               </mat-option>
+               <mat-option [value]="2">
+                 Box
+               </mat-option>
+             </mat-select>
+         
+     </div>
+    </div>
+    <div class="form-group">
+     <label class="control-label col-sm-4 add-member-label">Model: </label>
+     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 margin-bottom-15px">              
+            
+             <mat-select class="form-control" placeholder="Select Model">
+               <mat-option [value]="0">
+                 Agx
+               </mat-option>
+               <mat-option [value]="1">
+                 Bags
+               </mat-option>
+               <mat-option [value]="2">
+                 Box
+               </mat-option>
+             </mat-select>
+         
+     </div>
+    </div>
+    <div class="form-group">
+     <label class="control-label col-sm-4 add-member-label">Part Make: </label>
+     <div class="col-sm-8 margin-bottom-15px">
+         <input type="text" class="form-control" placeholder="Enter Part Make">
+     </div>
+    </div>
+    </form>
+</div>
+<mat-dialog-actions align="end">
+    <button mat-raised-button class="btn-primary"  [mat-dialog-close]="'test'"><mat-icon>send</mat-icon><span>Save</span></button>
+    <button mat-raised-button class="add-dark-hover btn-default" (click)="close()"><mat-icon>cancel</mat-icon>Close</button>
+</mat-dialog-actions> 
